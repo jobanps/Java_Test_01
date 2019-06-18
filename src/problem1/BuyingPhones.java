@@ -14,7 +14,10 @@ public class BuyingPhones {
 		double phonePrice2 = price;
 		double phonePrice3 = price * 0.50;
 		
-		
+		//Output price of each Phone
+		System.out.println("Phone 1 Price : $" + phonePrice1);
+		System.out.println("Phone 2 Price : $" + phonePrice2);
+		System.out.println("Phone 3 Price : $" + phonePrice3);
 		
 		s.close();
 		
