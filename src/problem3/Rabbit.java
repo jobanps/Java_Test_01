@@ -28,8 +28,8 @@ public class Rabbit {
 	
 	public void moveRabbit() {
 		
-		xPosition = xPosition + 15; // moves to right by 15points
-		System.out.println("Rabbit moving to RIGHT");
+		xPosition = xPosition - 15; // moves to left forever by 15points
+		System.out.println("Rabbit moving to LEFT");
 	}
 
 	public void sayHello() {
