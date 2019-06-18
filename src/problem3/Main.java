@@ -16,11 +16,12 @@ public class Main {
 		
 		
 		boolean runForever = true;
-
+		boolean isLeft = true; // rabbit is moving to leftSide first when it starts if true
+		
 		while (runForever == true) {
 			System.out.println("Carrot");
 			Thread.sleep(1000);//every 1 second it moves
-			rabbit.moveRabbit();
+			isLeft = rabbit.moveRabbit(isLeft);
 			rabbit.printCurrentPosition();
 		}
 		

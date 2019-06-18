@@ -26,10 +26,36 @@ public class Rabbit {
 		System.out.println("The current position of the rabbit is : x : "+ xPosition + " , y: " + yPosition );
 	}
 	
-	public void moveRabbit() {
+	public boolean moveRabbit(boolean isLeft) {
 		
-		xPosition = xPosition - 15; // moves to left forever by 15points
-		System.out.println("Rabbit moving to LEFT");
+		int diff = 0;
+		
+		if(isLeft) {				
+			if(xPosition >= 15) {
+				xPosition = xPosition - 15; // moves to left forever by 15points
+				System.out.println("Rabbit moving to LEFT");
+				return true;
+			} else {
+				diff = 15 - xPosition;
+				xPosition = diff;
+				System.out.println("Rabbit moving to RIGHT");
+				return false; //changed sides
+			}
+			
+		} else {
+			// 500 - 15 = 485 to make sure it reaches end of wall
+			if(xPosition <= 485) {
+				xPosition = xPosition + 15; // moves to left forever by 15points
+				System.out.println("Rabbit moving to RIGHT");
+				return false; // moving to right so isLeft = false;
+				} else {
+				diff = 500 - xPosition;
+				xPosition = 485 + diff;
+				System.out.println("Rabbit moving to LEFT");
+				return true;
+			}
+			
+		}
 	}
 
 	public void sayHello() {
