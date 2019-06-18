@@ -11,11 +11,13 @@ public class BuyingPhones {
 		
 		//Calculate Price of each phone
 		double phonePrice1 = price;
-		double phonePrice3 = price;
-		double phonePrice2 = price * 0.50;
+		double phonePrice2 = price;
+		double phonePrice3 = price * 0.50;
 		
 		
-		s.close();		
+		
+		s.close();
+		
 
 	}
 
