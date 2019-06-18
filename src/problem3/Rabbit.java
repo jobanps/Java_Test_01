@@ -23,7 +23,13 @@ public class Rabbit {
 	// METHODS 
 	// ------------
 	public void printCurrentPosition() {
-		System.out.println("The current position of the rabbit is: ");
+		System.out.println("The current position of the rabbit is : x : "+ xPosition + " , y: " + yPosition );
+	}
+	
+	public void moveRabbit() {
+		
+		xPosition = xPosition + 15; // moves to right by 15points
+		System.out.println("Rabbit moving to RIGHT");
 	}
 
 	public void sayHello() {

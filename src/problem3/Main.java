@@ -19,7 +19,9 @@ public class Main {
 
 		while (runForever == true) {
 			System.out.println("Carrot");
-			Thread.sleep(3000);
+			Thread.sleep(1000);//every 1 second it moves
+			rabbit.moveRabbit();
+			rabbit.printCurrentPosition();
 		}
 		
 		input.close();
