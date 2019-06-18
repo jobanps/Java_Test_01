@@ -12,7 +12,10 @@ public class Rabbit {
 	// -----------
 	// CONSTRUCTOR 
 	// ------------
-	public Rabbit() {
+	public Rabbit(int xPos, int yPos) {
+		
+		this.xPosition = xPos;
+		this.yPosition = yPos;
 
 	}
 	

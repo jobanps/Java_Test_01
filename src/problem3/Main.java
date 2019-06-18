@@ -1,8 +1,17 @@
 package problem3;
 
+import java.util.Scanner;
+
 public class Main {	
 	public static void main(String[] args) throws InterruptedException {
-		Rabbit rabbit = new Rabbit();
+		//Taking x and y values from user
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter initial value of x position");
+		int xPos = input.nextInt();
+		System.out.println("Enter initial value of y position");
+		int yPos = input.nextInt();
+		
+		Rabbit rabbit = new Rabbit(xPos, yPos);
 		rabbit.sayHello();
 		
 		
@@ -12,6 +21,8 @@ public class Main {
 			System.out.println("Carrot");
 			Thread.sleep(3000);
 		}
+		
+		input.close();
 	}
 
 }
