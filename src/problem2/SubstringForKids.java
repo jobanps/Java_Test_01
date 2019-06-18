@@ -13,20 +13,26 @@ public class SubstringForKids {
 		System.out.println(obj.substringForKids(0, 5, "peterisshouting"));
 		System.out.println(obj.substringForKids(2, 4, "apple"));
 		
+		//i>j
+		System.out.println(obj.substringForKids(5, 3, "bad"));
+		
 	}
 	
 	public String substringForKids(int i, int j, String sentence) {
 		
 		String result = "";
-		if(i == j)
+		if(i == j) {
 			return "" + sentence.charAt(i);
-		else {
+		} else if(i < j){
 			
 			for(int a=i; a<=j ; a++) {
 				result += sentence.charAt(a);
 			}
 			return result; 
-
+		
+		} else {
+			return "You gave me invalid numbers!";
 		}
+		
 	}
 }
